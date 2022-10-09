@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/carjavi/nodejs-guide/master/img/nodejs.png" height="100" alt=" " /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/carjavi/nodejs-guide/master/img/nodejs.png" height="300" alt=" " /></p>
 <br>
 <h1 align="center">NodeJS Guide</h1> 
 <h4 align="right">Oct 22</h4>
@@ -7,18 +7,23 @@
 
 <br>
 
-## Modulos
+Nodejs delega funciones a los modulos mientras continua el algoritmo, por eso es asincrono.
+
+# Modulos
+Summary
 ```
-const os = requiere(os);  // modulo del sistema
-const Network = requiere(./network.js); // parte del codigo 
-console.log(module); // desde donde estas llamando el modulo, se ver el objeto con sus propiedades que son los metodos
+const os = require('os');  // modulo del sistema, no requiere instalación.
+const Network = require('./network.js'); // parte del codigo 
+console.log('module-name'); // desde donde estas llamando el modulo, se ver el objeto con sus propiedades que son los metodos
+module.export = Obj;  //permite exportar un objeto, propiedades, funciones , variables
+export.<nombre> = nombre;  // solo permite exportar propiedades que son funciones
 ```
 
 
 ### Sample 1
 exportando metodos desde un objeto. ```index.js```: 
 ```
-const test = requiere(./test.js);
+const test = requiere('./test.js');
 console.log(test.x(a,b));
 console.log(test.y(a,b));
 ```
@@ -38,19 +43,20 @@ module.y = y;
 module.exports = Obj;
 ```
 
-nota: module.exports tambien puede exportar una fucnion simplemente
-```module.exports = <name fuction>;```
+nota: ***module.exports*** tambien puede exportar una fución simplemente
+```module.exports = <fuction-name>;```
 
-
+<br>
 
 ---
 
+<br>
 
 ### sample 2
-exportando propiedades
+exportando propiedades (cada propiedad es una función)
 ```
 index.js (lo que corremos)
-const test = requiere(./test.js);
+const test = requiere('./test.js');
 console.log(test.x(a,b));
 console.log(test.y(a,b));
 
@@ -61,6 +67,44 @@ function y(x1,x2){}
 
 exports.x = x;
 exports.y = y;
+```
+<br>
+
+# funciones Asincronicas y Sincronicas o bloqueante
+
+## sample asincronico
+no espera que se ejecute el codigo para continuar
+```
+const fs = require('fs');
+
+fs.writeFile('./test.text', 'linea1', fuction (err){
+    if (err){
+        console.log(err);
+    }
+    console.log("archivo creado");
+})
+```
+
+```
+query('Select * FROM users', function(err, users){
+    if (err){
+        console.log(err);
+    }
+    if(users){
+
+    }
+});
+```
+
+
+## codigo bloqueante 
+espera que se ejecute el cosido para continuar.
+```
+const result = fs.writeFile('./test.text', 'linea1');
+```
+
+```
+const users = query('SELECT * FROM Users'); 
 ```
 
 

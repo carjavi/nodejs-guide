@@ -128,7 +128,7 @@ const result = fs.writeFile('./test.text', 'linea1');
 const users = query('SELECT * FROM Users'); 
 ```
 
-# Funiones flecha
+# Función flecha
 ```
 //To get a default set of Bindings and Parsers
 const { SerialPort } = require('serialport')
@@ -136,35 +136,13 @@ const { SerialPort } = require('serialport')
 serialport.close(callback?: error => {}): void
 ```
 
+<!--  
 # asycronomo funtions
 
-<br>
-
 # eventos
+-->
 
 <br>
-
-# Sample Etiquetas normalizadas
-```
-/**
- * @fileoverview Menú aprMenu, desplegable con efecto expansión suavizado
- * @version 1.1
- * @author Carlos Briceño <carjavi@hotmail.com>
- * @copyright  https://www.instintodigital.net/
- * @license
- * @see https://github.com/carjavi/nodejs-code
- * @supported Testado en IE10+ y en FF26+
- * 
- * History
- * v2.2 – Se mejoró el efecto de expansión de los submenús dándole efecto aceleración
- * v2.0 – Se evitó que quedaran supersupuestos textos de submenús
- * v1.1 – Se mejoró la compatibilidad con navegadores Opera
- * ----
- * La primera versión de aprMenu fue escrita por Karl Monitrix
- */
-```
-<br>
-
 
 ---
 Copyright &copy; 2022 [carjavi](https://github.com/carjavi). <br>

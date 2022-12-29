@@ -9,6 +9,28 @@
 
 Nodejs delega funciones a los modulos mientras continua el algoritmo, por eso es asincrono.
 
+
+**Clone and run for a quick way to see NodeGui in action.**
+
+## To Use
+
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
+
+Make sure you have met the requirements listed here: https://docs.nodegui.org/docs/guides/getting-started#developer-environment
+
+From your command line:
+
+```bash
+# Clone this repository
+git clone https://github.com/nodegui/nodegui-starter
+# Go into the repository
+cd nodegui-starter
+# Install dependencies
+npm install
+# Run the app
+npm start
+```
+
 # Modulos
 Summary
 ```
@@ -107,17 +129,43 @@ const result = fs.writeFile('./test.text', 'linea1');
 const users = query('SELECT * FROM Users'); 
 ```
 
-
-
----
-// To get a default set of Bindings and Parsers
+# Funiones flecha
+```
+//To get a default set of Bindings and Parsers
 const { SerialPort } = require('serialport')
 
 serialport.close(callback?: error => {}): void
+```
 
-asycronomo funtions
+# asycronomo funtions
 
-eventos
+<br>
+
+# eventos
+
+<br>
+
+# Sample Etiquetas normalizadas
+```
+/**
+ * @fileoverview Menú aprMenu, desplegable con efecto expansión suavizado
+ * @version 1.1
+ * @author Carlos Briceño <carjavi@hotmail.com>
+ * @copyright  https://www.instintodigital.net/
+ * @license
+ * @see https://github.com/carjavi/nodejs-code
+ * @supported Testado en IE10+ y en FF26+
+ * 
+ * History
+ * v2.2 – Se mejoró el efecto de expansión de los submenús dándole efecto aceleración
+ * v2.0 – Se evitó que quedaran supersupuestos textos de submenús
+ * v1.1 – Se mejoró la compatibilidad con navegadores Opera
+ * ----
+ * La primera versión de aprMenu fue escrita por Karl Monitrix
+ */
+```
+<br>
+
 
 ---
 Copyright &copy; 2022 [carjavi](https://github.com/carjavi). <br>
